@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body {
+    height: 200vh;
+    background-color: #23272a;
+    font-family: 'Share Tech Mono', monospace;
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none;
+    user-select: none;
+}
+
+#header {
+    width: 100vw;
+    height: 50vh;
+
+    display: flex;
+    align-items: stretch;
+}
+
+#header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 18px);
+    text-align: center;
+}
+
+#header-left {
+    height: 100%;
+
+    background-color: #000000;
+
+    float: left;
+    flex: 1;
+}
+
+#header-text, #header-cursor {
+    color: #ffffff;
+    font-size: 2em;
+}
+
+#header-right {
+    height: 100%;
+
+    background-color: #7f7f7f;
+
+    float: right;
+}
+
+#header-right img {
+    height: 100%;
+    width: auto;
+}
+
+#navbar {
+    width: 100vw;
+    height: calc(64px + 1.5em);
+
+    background-color: #454fbf;
+}
+
+#navbar a {
+    color: #ffffff;
+    font-size: 1.5em;
+    padding: 32px;
+    display: block;
+    float: left;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+#navbar a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#content {
+    margin-top: 10vh;
+}
+
+#content-top {
+    text-align: center;
+}
+
+#content-title {
+    color: #00ff00;
+    font-size: 4em;
+}
+
+#content-middle {
+    margin-top: 10vh;
+    width: 100vw;
+    display: flex;
+    left: 0;
+    align-items: flex-end;
+}
+
+.content-middle-scroll {
+    width: 25vw;
+    height: 100vh;
+    position: relative;
+    transform: translateY(100%);
+    transition: transform 0.6s ease-in-out;
+    overflow: hidden;
+}
+
+.content-middle-scroll.active {
+    transform: translateY(0%);
+}
+
+.content-middle-scroll:nth-child(1) {
+    height: 100vh;
+    background: #df4534;
+}
+.content-middle-scroll:nth-child(2) {
+    height: 90vh;
+    background: #9cce38;
+}
+.content-middle-scroll:nth-child(3) {
+    height: 80vh;
+    background: #fcb858;
+}
+.content-middle-scroll:nth-child(4) {
+    height: 70vh;
+    background: #4f86cd;
+}
+
+.content-middle-scroll-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.content-middle-scroll-text {
+    position: absolute;
+    top: 3em;
+    left: 0;
+    right: 0;
+    padding: 1em;
+    color: #ffffff;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.content-middle-scroll-image {
+    max-width: 25vw;
+    height: calc(100vh - 5em - 272px);
+    background-color: #7f7f7f;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+}
