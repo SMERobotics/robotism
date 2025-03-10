@@ -58,6 +58,9 @@ body {
     height: calc(64px + 1.5em);
 
     background-color: #454fbf;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 #navbar a {
@@ -76,7 +79,10 @@ body {
 }
 
 #content {
-    margin-top: 10vh;
+    padding-top: 10vh;
+    background-image: url('/content/content-background.png');
+    /* background-size: cover; */
+    background-position: top;
 }
 
 #content-top {

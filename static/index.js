@@ -38,14 +38,6 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }
 
-document.addEventListener("wheel", (event) => {
-    event.preventDefault();
-    window.scrollBy({
-        top: event.deltaY * 2,
-        behavior: "smooth"
-    });
-}, { passive: false });
-
 document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", () => {
         if (_j === 0 && window.scrollY > window.innerHeight * 0.1) {
