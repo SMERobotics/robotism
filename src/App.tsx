@@ -12,7 +12,7 @@ const BlueprintGrid = () => (
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#F0F4F8] text-[#0F172A] font-mono selection:bg-blue-200 overflow-x-hidden relative">
+    <div className="min-h-screen bg-[#F0F4F8] text-[#0F172A] font-ibm selection:bg-blue-200 overflow-x-hidden relative">
       <BlueprintGrid />
       
       {/* Header / Nav */}
@@ -20,17 +20,18 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <div className="w-10 h-10 bg-slate-900 text-white flex items-center justify-center font-bold relative group overflow-hidden">
-               <span className="relative z-10">SM</span>
+               <span className="relative z-10 font-oxanium">SM</span>
             </div>
             <div className="flex flex-col leading-tight">
-              <span className="text-sm tracking-[0.2em] font-bold uppercase">Shawnee Mission East</span>
-              <span className="text-[10px] tracking-widest text-slate-500 uppercase">Robotics Program</span>
+              <span className="text-sm tracking-[0.2em] font-bold uppercase font-oxanium">Shawnee Mission East</span>
+              <span className="text-[10px] tracking-widest text-slate-500 uppercase font-oxanium">Robotics Program</span>
             </div>
           </div>
-          <div className="flex gap-8 text-xs font-bold tracking-[0.15em] uppercase text-slate-600">
-            {['[TEAMS]', '[SEASON]', '[OUTREACH]'].map((item) => (
-              <span key={item} className="cursor-pointer hover:text-blue-600 transition-colors hover:underline decoration-2 underline-offset-8 decoration-blue-600">
-                {item}
+          <div className="flex gap-8 text-xs font-bold tracking-[0.15em] text-slate-600 font-oxanium">
+            {['[teams]', '[season]', '[outreach]'].map((item) => (
+              <span key={item} className="relative group overflow-hidden cursor-pointer py-1">
+                <span className="relative z-10 group-hover:text-blue-600 transition-colors">{item}</span>
+                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
               </span>
             ))}
           </div>
@@ -46,17 +47,17 @@ export default function App() {
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="inline-flex items-center gap-3 px-4 py-1 border border-slate-900 bg-white text-xs font-bold uppercase tracking-wider"
+              className="inline-flex items-center gap-3 px-4 py-1 border border-slate-900 bg-white text-xs font-bold tracking-wider"
             >
               <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.8)]"></div>
-              System Status: Operational
+              system status: OPERATIONAL
             </motion.div>
             
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-6xl lg:text-8xl font-black tracking-tighter leading-[0.9]"
+              className="text-6xl lg:text-8xl font-bold tracking-tighter leading-[0.9] font-oxanium"
             >
               DECODE <br />
               <span className="text-blue-600">THE FUTURE</span>
@@ -83,8 +84,8 @@ export default function App() {
                   {/* The requested animation line */}
                   <div className="absolute top-0 left-0 w-full h-2 bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
 
-                  <div className="text-[10px] uppercase text-slate-500 group-hover:text-slate-300 mb-1 tracking-widest transition-colors">Unit ID</div>
-                  <div className="text-3xl font-bold flex items-center gap-2 transition-colors">
+                  <div className="text-[10px] uppercase text-slate-500 group-hover:text-slate-300 mb-1 tracking-widest transition-colors relative z-10 font-oxanium">Unit ID</div>
+                  <div className="text-3xl font-bold flex items-center gap-2 transition-colors relative z-10 font-oxanium">
                     {team}
                     <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all" />
                   </div>
@@ -100,7 +101,7 @@ export default function App() {
             transition={{ delay: 0.4 }}
             className="lg:col-span-4 relative border-2 border-slate-900 bg-white p-2 min-h-[300px] flex flex-col"
           >
-            <div className="absolute top-0 left-0 bg-slate-900 text-white px-3 py-1 text-[10px] font-bold">FIG 1.0</div>
+            <div className="absolute top-0 left-0 bg-slate-900 text-white px-3 py-1 text-[10px] font-bold font-oxanium">FIG 1.0</div>
             
             <div className="flex-1 flex items-center justify-center relative overflow-hidden bg-blue-50">
                {/* Animated Elements */}
@@ -117,7 +118,7 @@ export default function App() {
                <div className="absolute w-2 h-2 bg-blue-600 rounded-full"></div>
             </div>
             
-            <div className="mt-2 flex justify-between text-[10px] font-bold uppercase text-slate-700 tracking-wider px-2">
+            <div className="mt-2 flex justify-between text-[10px] font-bold uppercase text-slate-700 tracking-wider px-2 font-oxanium">
               <span>Sensor Array</span>
               <span className="text-emerald-600">Online</span>
             </div>
@@ -129,17 +130,17 @@ export default function App() {
       <section className="border-b border-slate-300 bg-white py-16 relative z-10">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12">
           {[
-            { label: "Matches Played", value: "42", icon: Activity },
-            { label: "Opr Average", value: "185.4", icon: Hash },
-            { label: "Students", value: "35", icon: Users },
-            { label: "Outreach Hours", value: "240+", icon: Globe },
+            { label: "Matches Played", value: "67", icon: Activity },
+            { label: "Opr Average", value: "676.7", icon: Hash },
+            { label: "Students", value: "67", icon: Users },
+            { label: "Outreach Hours", value: "67+", icon: Globe },
           ].map((stat, i) => (
             <div key={i} className="flex flex-col gap-3 group">
-              <div className="flex items-center gap-2 text-slate-500 text-xs font-bold uppercase tracking-widest group-hover:text-blue-600 transition-colors">
+              <div className="flex items-center gap-2 text-slate-500 text-xs font-bold uppercase tracking-widest group-hover:text-blue-600 transition-colors font-oxanium">
                 <stat.icon className="w-4 h-4" />
                 {stat.label}
               </div>
-              <div className="text-5xl font-black tabular-nums tracking-tighter">{stat.value}</div>
+              <div className="text-5xl font-bold tabular-nums tracking-tighter font-oxanium">{stat.value}</div>
             </div>
           ))}
         </div>
@@ -148,8 +149,8 @@ export default function App() {
       {/* Performance Module */}
       <section className="py-24 max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex items-end justify-between mb-12 border-b border-slate-900 pb-6">
-          <h2 className="text-4xl font-bold tracking-tight">PERFORMANCE LOGS</h2>
-          <div className="text-xs font-bold uppercase text-slate-500 tracking-widest">Last Sync: 14:02:55</div>
+          <h2 className="text-4xl font-bold tracking-tight font-oxanium">PERFORMANCE LOGS</h2>
+          <div className="text-xs font-bold uppercase text-slate-500 tracking-widest font-oxanium">Last Sync: 14:02:55</div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-2 border-slate-900 bg-white">
@@ -161,13 +162,13 @@ export default function App() {
             <div key={team.id} className={`p-10 border-b md:border-b-0 ${idx !== 2 ? 'md:border-r border-slate-900' : ''} hover:bg-blue-50 transition-colors group relative overflow-hidden`}>
               
               <div className="flex justify-between items-start mb-12 relative z-10">
-                <span className="text-6xl font-black text-slate-100 group-hover:text-blue-100 transition-colors">0{idx + 1}</span>
+                <span className="text-6xl font-black text-slate-100 group-hover:text-blue-100 transition-colors font-oxanium">0{idx + 1}</span>
                 <Cpu className="w-8 h-8 text-slate-700 group-hover:text-blue-600 transition-colors" />
               </div>
               
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold mb-1">TEAM {team.id}</h3>
-                <div className="text-xs font-bold text-blue-600 mb-8 uppercase tracking-[0.2em]">{team.name} UNIT</div>
+                <h3 className="text-2xl font-bold mb-1 font-oxanium">TEAM {team.id}</h3>
+                <div className="text-xs font-bold text-blue-600 mb-8 uppercase tracking-[0.2em] font-oxanium">{team.name} UNIT</div>
                 
                 <div className="space-y-4">
                   <div className="flex justify-between text-sm border-b border-slate-200 pb-3 text-slate-600">
@@ -195,7 +196,7 @@ export default function App() {
       <footer className="border-t border-slate-300 bg-slate-900 text-white py-16 relative z-10">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            <div className="text-2xl font-bold mb-6 tracking-tight">SHAWNEE MISSION EAST</div>
+            <div className="text-2xl font-bold mb-6 tracking-tight font-oxanium">SHAWNEE MISSION EAST</div>
             <div className="text-sm opacity-60 max-w-xs font-mono leading-relaxed">
               7500 Mission Rd, Prairie Village, KS 66208<br/>
               Robotics Program / Kansas City
@@ -205,7 +206,7 @@ export default function App() {
              <div className="flex justify-end gap-6 mb-8">
                <Radio className="w-6 h-6 animate-pulse text-blue-400" />
              </div>
-             <div className="text-[10px] uppercase tracking-[0.2em] opacity-40">
+             <div className="text-[10px] uppercase tracking-[0.2em] opacity-40 font-oxanium">
                Designed for DECODE 2025-2026
              </div>
           </div>

@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+  --font-oxanium: "Oxanium", sans-serif;
+  --font-ibm: "IBM Plex Mono", monospace;
+}
+
 html, body {
   margin: 0;
   padding: 0;
