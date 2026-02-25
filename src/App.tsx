@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Activity, Hash, Users, Globe, ChevronRight, Cpu, Radio, Zap } from 'lucide-react';
+import { Activity, Hash, Users, Globe, ChevronRight, Cpu, Radio, Zap, Swords, ChessKnight, Shield } from 'lucide-react';
 
 const BlueprintGrid = () => (
   <div className="absolute inset-0 pointer-events-none opacity-[0.03]" 
@@ -101,7 +101,7 @@ export default function App() {
             transition={{ delay: 0.4 }}
             className="lg:col-span-4 relative border-2 border-slate-900 bg-white p-2 min-h-[300px] flex flex-col"
           >
-            <div className="absolute top-0 left-0 bg-slate-900 text-white px-3 py-1 text-[10px] font-bold font-oxanium">FIG 1.0</div>
+            <div className="absolute top-0 left-0 bg-slate-900 text-white px-3 py-1 text-[10px] font-bold font-oxanium">................</div>
             
             <div className="flex-1 flex items-center justify-center relative overflow-hidden bg-blue-50">
                {/* Animated Elements */}
@@ -149,35 +149,35 @@ export default function App() {
       {/* Performance Module */}
       <section className="py-24 max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex items-end justify-between mb-12 border-b border-slate-900 pb-6">
-          <h2 className="text-4xl font-bold tracking-tight font-oxanium">PERFORMANCE LOGS</h2>
-          <div className="text-xs font-bold uppercase text-slate-500 tracking-widest font-oxanium">Last Sync: 14:02:55</div>
+          <h2 className="text-4xl font-bold tracking-tight font-oxanium">SEASON PERFORMANCE</h2>
+          <div className="text-xs font-bold uppercase text-slate-500 tracking-widest font-oxanium">Last Sync: 2026-02-25T23:38:25Z</div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-2 border-slate-900 bg-white">
           {[
-            { id: "20181", name: "ALPHA", status: "Ranking #3", score: 98 },
-            { id: "26855", name: "BETA", status: "Ranking #8", score: 92 },
-            { id: "21692", name: "GAMMA", status: "Ranking #12", score: 85 },
+            { id: "20181", name: "LANCERS", icon: Swords, event: "USMOKSCMP", opr: 66.33 },
+            { id: "26855", name: "CAVALRY", icon: ChessKnight, event: "USMOKSLSSQ", opr: 71.37 },
+            { id: "21692", name: "KNIGHTS", icon: Shield, event: "USMOKSKCWLT1", opr: 20.33 },
           ].map((team, idx) => (
             <div key={team.id} className={`p-10 border-b md:border-b-0 ${idx !== 2 ? 'md:border-r border-slate-900' : ''} hover:bg-blue-50 transition-colors group relative overflow-hidden`}>
               
               <div className="flex justify-between items-start mb-12 relative z-10">
-                <span className="text-6xl font-black text-slate-100 group-hover:text-blue-100 transition-colors font-oxanium">0{idx + 1}</span>
-                <Cpu className="w-8 h-8 text-slate-700 group-hover:text-blue-600 transition-colors" />
+                <span className="text-6xl font-black text-sky-300 group-hover:text-blue-400 transition-colors font-oxanium">0{idx + 1}</span>
+                <team.icon className="w-8 h-8 text-slate-700 group-hover:text-blue-500 transition-colors" />
               </div>
               
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold mb-1 font-oxanium">TEAM {team.id}</h3>
-                <div className="text-xs font-bold text-blue-600 mb-8 uppercase tracking-[0.2em] font-oxanium">{team.name} UNIT</div>
+                <div className="text-xs font-bold text-blue-600 mb-8 uppercase tracking-[0.2em] font-oxanium">SME {team.name}</div>
                 
                 <div className="space-y-4">
                   <div className="flex justify-between text-sm border-b border-slate-200 pb-3 text-slate-600">
-                    <span>Current Rank</span>
-                    <span className="font-bold text-slate-900">{team.status}</span>
+                    <span>Current Event</span>
+                    <span className="font-bold text-slate-900">{team.event}</span>
                   </div>
                   <div className="flex justify-between text-sm border-b border-slate-200 pb-3 text-slate-600">
-                    <span>Efficiency</span>
-                    <span className="font-bold text-slate-900">{team.score}%</span>
+                    <span>OPR</span>
+                    <span className="font-bold text-slate-900">{team.opr}</span>
                   </div>
                   <div className="flex justify-between text-sm border-b border-slate-200 pb-3 text-slate-600">
                     <span>Signal Strength</span>
@@ -198,7 +198,8 @@ export default function App() {
           <div>
             <div className="text-2xl font-bold mb-6 tracking-tight font-oxanium">SHAWNEE MISSION EAST</div>
             <div className="text-sm opacity-60 max-w-xs font-mono leading-relaxed">
-              7500 Mission Rd, Prairie Village, KS 66208<br/>
+              7500 Mission Rd<br/>
+              Prairie Village, KS 66208<br/>
               Robotics Program / Kansas City
             </div>
           </div>
@@ -207,7 +208,7 @@ export default function App() {
                <Radio className="w-6 h-6 animate-pulse text-blue-400" />
              </div>
              <div className="text-[10px] uppercase tracking-[0.2em] opacity-40 font-oxanium">
-               Designed for DECODE 2025-2026
+               Innovated for DECODE 2025-2026
              </div>
           </div>
         </div>
