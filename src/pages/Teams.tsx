@@ -45,7 +45,7 @@ export default function Teams() {
                     directory: /teams
                 </div>
                 <h1 className="text-5xl lg:text-7xl font-bold tracking-tighter mb-6 font-oxanium uppercase">
-                    Program <span className="text-blue-600">Overview</span>
+                    Program<span className="text-blue-600 ml-2">Overview</span>
                 </h1>
                 <p className="text-xl max-w-3xl border-l-4 border-blue-600 pl-6 py-2 text-slate-600">
                     Shawnee Mission East Robotics operates three distinct First

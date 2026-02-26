@@ -5,6 +5,8 @@ import { Radio } from "lucide-react";
 export default function MainLayout() {
     return (
         <div className="min-h-screen bg-[#F0F4F8] text-[#0F172A] font-ibm selection:bg-blue-200 overflow-x-hidden relative">
+            <title>Shawnee Mission East Robotics</title>
+            
             <BlueprintGrid />
 
             {/* Header / Nav */}
@@ -56,7 +58,7 @@ export default function MainLayout() {
                 <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div>
                         <div className="text-2xl font-bold mb-6 tracking-tight font-oxanium">
-                            SHAWNEE MISSION EAST
+                            SHAWNEE MISSION EAST ROBOTICS
                         </div>
                         <div className="text-sm opacity-60 max-w-xs font-mono leading-relaxed">
                             7500 Mission Rd
