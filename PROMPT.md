@@ -12,4 +12,4 @@ You have an empty directory here, I want you to initalize a project with the fol
 
 One initalized, I want you to create SIX different designs, each featuring a technical, but not necessarily hacker-y style. Each design should be creative and unique from all the others that you create. They should be hosted on /1, /2, /3, /4, /5, and /6 respectively. Please keep the future in mind, and make it easy for you to add or remove test designs, and make it easy for you to convert one design into the final iteration in the future.
 
-**Use your frontend design skill to make these designs *exceptional.***
+**Use your frontend design skill to make these designs _exceptional._**
