@@ -1,0 +1,210 @@
+/*Import desired fonts using google fonts Merriweather and Roboto Mono are already imported*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+/*use these colors to change the colors of the website with hex codes*/
+:root {
+    --primary-color: #1E90FF;
+    --secondary-color: #FF6347;
+    --base-color: #9BDDFF;
+    --text-color: #333333;
+    --font-family: 'Merriweather', serif;
+    --font-family-mono: 'Roboto Mono', monospace;
+    --color-1: #E0E0E0;
+    --color-2: #C0C0C0;
+    --color-3: #A0A0A0;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: var(--font-family-mono);
+    color: var(--text-color);
+}
+body {
+    padding: 1em;
+    background-color: var(--base-color);
+}
+h1, h2, h3, h4 {
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+nav {
+    margin: 1em 2em 1em auto;
+    width: min(2500px, 100%);
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 2em;
+    font-weight: bold;
+    font-family: var(--Merriweather, Roboto Mono);
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+nav a:hover {
+    text-decoration: underline;
+    font-size: 1.05em;
+}
+
+header, section{
+    margin: 1em auto;
+    width: min(75em, 100%);
+    background-color: var(--color-1);
+    padding: min(2em, 15%);
+    border-radius: 1em;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+header img {
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.text-container {
+    flex: 0 1 34em;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+.text-container p {
+    font-size: 1.25em;
+    margin: 0.75em 0 1em 0;
+}
+
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-color);
+    padding: 0.75em 1.25em;
+    border-radius: 0.5em;
+    font-weight: 600;
+}
+
+section {
+    padding: 3em min(2em, 15%);
+    background-color: var(--color-2);
+    text-align: center;
+}
+h2 {
+    font-size: 2rem;
+}
+section p {
+    font-size: 1.25rem;
+    margin: 1em;
+}
+section#Bot-photos {
+    background-color: var(--color-3);
+}
+.grid-container {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr, 1fr;
+    grid-template-areas:
+    "img-1 img-1 img-2 img-3"
+    "img-1 img-1 img-4 img-5";
+    gap: 1em;
+}       
+.grid-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5em;
+    transition: 100ms ease;
+}
+.grid-container img:hover {
+    transform: scale(1.05);
+}
+p a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+p a:hover {
+    text-decoration: underline;
+    font-size: 1.05em;
+}
+details {
+    margin-top: 1em;
+    background-color: var(--color-3);
+    border-radius: 1em;
+}
+
+details summary {
+    padding: 1em;
+    font-size: 1.7rem;
+    font-family: Merriweather, Roboto Mono;
+}
+details p {
+    padding: 0 2em 2em 2em;
+}
+
+footer {
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+footer a{
+    margin: 0, 1em;
+    text-decoration: none;
+    color: var(--text-color);
+}
+footer a:hover {
+    text-decoration: underline;
+    font-size: 1.05em;
+}
+
+@media (max-width: 988px) {
+    header {
+        text-align: center;
+    }
+    header.text-container {
+        padding-top: 0;
+    }
+}
+@media (max-width: 640px) {
+    nav li {
+        display: none;
+    }
+    nav li:first-child, nav li:nth-child(2) {
+        display: block;
+    }
+    header {
+    margin-top: 0;
+    }
+    .cta-button {
+        margin-top: 0.5em;
+        width: 100%;
+    }
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .text-container {
+        font-size: 1rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
