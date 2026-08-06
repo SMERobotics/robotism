@@ -26,7 +26,7 @@ body {
     padding: 1em;
     background-color: var(--base-color);
 }
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     font-family: var(--font-family);
     color: var(--text-color);
 }
@@ -106,9 +106,6 @@ section {
     background-color: var(--color-2);
     text-align: center;
 }
-h2 {
-    font-size: 2rem;
-}
 section p {
     font-size: 1.25rem;
     margin: 1em;
@@ -174,6 +171,52 @@ footer a:hover {
     font-size: 1.05em;
 }
 
+.Team-Intro {
+    display: inline-block;
+    border: 0px solid #72b8ff;
+    margin: 5px
+}
+.Team-Intro .Team-Member {
+    padding: 10px;
+    text-align: center;
+}
+ .Txt-alter {
+    background-color: #72b8ff;
+    font-family: Roboto Mono, monospace;
+    font-size: 2em;
+    
+ }
+.Txt-alter:hover {
+    text-decoration: underline;
+}
+.Team-Intro:hover {
+    border: 3px solid #000000;
+    border-radius: 0.65em;
+}
+.Team-Intro {
+    border-radius: 0.65em;
+    background-color: #72b8ff;
+}
+.Team-Intro img {
+    width: 350px;
+    height: auto;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+h2 {
+    font-size: 2.5em;
+    font-family: Merriweather, Roboto Mono;
+}
+h5 {
+    font-size: 2.5em;
+    font-family: Merriweather, Roboto Mono;
+    padding-bottom: 1em;
+}
+.Popup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @media (max-width: 988px) {
     header {
         text-align: center;
@@ -206,5 +249,9 @@ footer a:hover {
     h2 {
         font-size: 1.5rem;
     }
+    .Team-Intro img {
+        width: 200px;
+    }
 }
+
 
