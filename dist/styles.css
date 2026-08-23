@@ -302,6 +302,40 @@ h1 {
   font-size: clamp(1.6rem, 2.7vw, 2.2rem);
 }
 
+.pdf-section {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.pdf-viewer {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.pdf-viewer iframe {
+  display: block;
+  width: 100%;
+  height: min(78vh, 900px);
+  min-height: 560px;
+  border: 0;
+}
+
+.pdf-fallback {
+  margin: 0;
+  padding: 14px 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--muted);
+}
+
+.pdf-fallback a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
