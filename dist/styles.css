@@ -193,6 +193,10 @@ h1 {
   color: var(--muted);
 }
 
+.current-season-partners p {
+  font-size: 1.2rem;
+}
+
 .hero-card ul {
   padding-left: 18px;
   color: var(--muted);
