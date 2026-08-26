@@ -322,8 +322,8 @@ h1 {
 .pdf-viewer iframe {
   display: block;
   width: 100%;
-  height: min(78vh, 900px);
-  min-height: 560px;
+  height: min(85vh, 1120px);
+  min-height: 670px;
   border: 0;
 }
 
