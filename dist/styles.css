@@ -441,6 +441,16 @@ h1 {
   display: block;
 }
 
+.team-grid:not(.coaches-grid) .team-card img {
+  height: 420px;
+  max-height: none;
+  object-fit: contain;
+  background: rgba(7, 17, 31, 0.35);
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
 .team-card-content {
   padding: 20px;
 }
