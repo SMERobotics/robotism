@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+
+@theme {
+	--font-content: 'D-DIN-PRO', sans-serif;
+	--font-mono: 'JetBrains Mono Variable', monospace;
+}
+
+@layer base {
+	body {
+		@apply font-mono;
+	}
+
+	p {
+		@apply font-content;
+	}
+}
