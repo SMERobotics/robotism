@@ -34,12 +34,9 @@ a {
   max-width: 1320px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 16px 20px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: rgba(7, 17, 31, 0.7);
+  gap: 48px;
 }
 
 .brand-group {
@@ -79,9 +76,8 @@ a {
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 32px;
   color: var(--muted);
-  margin-right: 20px;
 }
 
 .nav-cta,
@@ -709,20 +705,31 @@ footer {
   }
 
   .top-nav {
-    border-radius: 24px;
     flex-wrap: wrap;
-    gap: 12px;
+    column-gap: 36px;
+    row-gap: 20px;
   }
 
   .nav-links {
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 28px;
+    row-gap: 10px;
   }
 }
 
 @media (max-width: 640px) {
   .hero {
     padding-inline: 14px;
+  }
+
+  .top-nav {
+    row-gap: 18px;
+  }
+
+  .nav-links {
+    column-gap: 24px;
   }
 
   .image-showcase,
