@@ -232,8 +232,12 @@ h1 {
 }
 
 .contact-page .image-placeholder {
-  aspect-ratio: 3 / 2;
-  max-height: 620px;
+  aspect-ratio: auto;
+  max-height: none;
+}
+
+.contact-page .image-placeholder img {
+  height: auto;
 }
 
 .about-page .hero-content {
