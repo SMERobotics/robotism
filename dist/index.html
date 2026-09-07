@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="navigation.js" defer></script>
   </head>
   <body>
     <header class="hero">
@@ -25,19 +26,26 @@
           </a>
           <a class="brand" href="index.html">SME Lancers <span>Robotics 20181</span></a>
         </div>
-        <div class="nav-links">
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation" hidden>
+          <!-- <span>Menu</span> -->
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="nav-links" id="primary-navigation">
+          <a class="mobile-home-link" href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="ourbot.html">Our Bot</a>
           <a href="impact.html">Impact</a>
           <a href="sponsorship.html">Sponsorship</a>
           <a href="contact.html">Contact</a>
         </div>
+        <div class="nav-backdrop" hidden></div>
       </nav>
 
       <section class="hero-content">
         <div class="hero-text">
-          <p class="eyebrow">STEM • Innovation • Teamwork • Creativity</p>
-          <h1>Help us <span id="build">build</span> the <span id="future">future</span> through <span id="robotics">robotics</span>.</h1>
+          <!-- <p class="eyebrow">STEM • Innovation • Teamwork • Creativity</p> -->
+          <!-- <h1>Help us build the future through robotics.</h1> -->
+          <h1>Innovate the future through robotics.</h1>
           <p class="lead">
             SME Lancers Robotics 20181 <strong class="role-highlight">(formerly 26855 Cavalry)</strong> is a school-run, student-driven program that designs, builds,
             and competes with high-power robots while bonding as a group and sharing our love of STEM with younger students in our community.
@@ -83,7 +91,7 @@
 
       <section class="section" id="about">
         <div class="section-heading">
-          <p class="eyebrow">About the team</p>
+          <!-- <p class="eyebrow">About the team</p> -->
           <h2>Driven by curiosity, built by collaboration.</h2>
         </div>
         <div class="card-grid">
@@ -114,16 +122,16 @@
 
       <section class="section pdf-section" id="documents">
         <div class="section-heading">
-          <h2>Season Portfolio</h2>
+          <h2>2025-2026 Season Portfolio</h2>
         </div>
         <div class="pdf-viewer">
           <iframe
             src="https://cdn-dl.s3.us-east-005.backblazeb2.com/FTC+Team+26855+Portfolio+-+080926.pdf"
-            title="Season information PDF"
+            title="Portfolio PDF"
             loading="lazy"
           ></iframe>
           <p class="pdf-fallback">
-            <a href="https://cdn-dl.s3.us-east-005.backblazeb2.com/FTC+Team+26855+Portfolio+-+080926.pdf" target="_blank" rel="noopener">Open the PDF in a new tab</a>
+            <a href="https://cdn-dl.s3.us-east-005.backblazeb2.com/FTC+Team+26855+Portfolio+-+080926.pdf" target="_blank" rel="noopener">Open in new tab</a>
           </p>
         </div>
       </section>
