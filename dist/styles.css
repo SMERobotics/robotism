@@ -285,6 +285,121 @@ h1 {
   font-size: 1.2rem;
 }
 
+.current-season-tier-card {
+  overflow-x: auto;
+}
+
+.sponsor-tier-section-heading h2 {
+  margin: 28px 0 12px;
+  font-size: clamp(1.6rem, 2.7vw, 2.2rem);
+}
+
+.sponsor-tier-grid,
+.sponsor-benefits {
+  display: grid;
+}
+
+.sponsor-tier-grid {
+  grid-template-columns: minmax(150px, 1fr) repeat(4, minmax(100px, 1fr));
+  gap: 8px;
+}
+
+.sponsor-tier-grid::before {
+  content: "";
+}
+
+.sponsor-tier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(7, 17, 31, 0.38);
+  text-align: center;
+}
+
+.sponsor-tier-image {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 16px;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sponsor-tier h3 {
+  margin: 0 0 4px;
+  font-size: 1.35rem;
+}
+
+.sponsor-tier-price {
+  margin: 0 0 18px !important;
+  color: var(--text);
+  font-size: 1.05rem !important;
+  font-weight: 800;
+}
+
+.sponsor-tier .btn {
+  width: 100%;
+  margin-top: auto;
+  text-align: center;
+}
+
+.sponsor-benefits {
+  grid-template-columns: minmax(150px, 1fr) repeat(4, minmax(100px, 1fr));
+  gap: 0;
+  margin-top: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.sponsor-benefits > div {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 10px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+.sponsor-benefits > div:nth-child(5n) {
+  border-right: 0;
+}
+
+.sponsor-benefits > div:nth-last-child(-n + 5) {
+  border-bottom: 0;
+}
+
+.sponsor-benefits .sponsor-benefit-label {
+  justify-content: flex-start;
+  color: var(--muted);
+  font-weight: 700;
+  text-align: left;
+}
+
+.sponsor-size-reward {
+  font-size: 1rem !important;
+  font-weight: 700;
+}
+
+.benefit-muted {
+  color: rgba(169, 184, 201, 0.45) !important;
+}
+
 .hero-card ul {
   padding-left: 18px;
   color: var(--muted);
@@ -828,6 +943,18 @@ footer {
 }
 
 @media (max-width: 900px) {
+  .sponsor-tier-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+
+  .sponsor-tier-grid::before {
+    display: none;
+  }
+
+  .sponsor-benefits {
+    min-width: 760px;
+  }
+
   .hero-content,
   .contact-page .hero-content,
   .about-page .hero-content,
@@ -964,6 +1091,10 @@ footer {
 
   .section {
     padding-top: 32px;
+  }
+
+  .sponsor-tier-grid {
+    grid-template-columns: minmax(240px, 1fr);
   }
 
   h1 {
