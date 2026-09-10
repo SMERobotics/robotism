@@ -103,7 +103,7 @@ button {
 }
 
 .mobile-home-link {
-  display: none;
+  display: inline-flex;
 }
 
 .nav-backdrop {

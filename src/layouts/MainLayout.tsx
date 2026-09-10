@@ -29,6 +29,7 @@ export default function MainLayout() {
                     </Link>
                     <div className="flex gap-8 text-xs font-bold tracking-[0.15em] text-slate-600 font-oxanium">
                         {[
+                            { label: "[home]", path: "/" },
                             { label: "[teams]", path: "/teams" },
                             { label: "[season]", path: "/" },
                             { label: "[outreach]", path: "/" },
