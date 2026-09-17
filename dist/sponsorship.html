@@ -72,39 +72,71 @@
         </div>
 
         <div class="sponsor-tier-section-heading">
-          <h2>Sponsor Tier List</h2>
+          <h2 id="sponsor-tier-heading">Sponsor Tier List</h2>
         </div>
 
-        <div class="current-season-tier-card">
-          <div class="sponsor-tier-grid">
-            <article class="sponsor-tier">
-              <h3>Bronze</h3>
-              <p class="sponsor-tier-price">$50 - $299</p>
-            </article>
-            <article class="sponsor-tier">
-              <h3>Silver</h3>
-              <p class="sponsor-tier-price">$300 - $999</p>
-            </article>
-            <article class="sponsor-tier">
-              <h3>Gold</h3>
-              <p class="sponsor-tier-price">$1,000 - $1,999</p>
-            </article>
-            <article class="sponsor-tier">
-              <h3>Platinum</h3>
-              <p class="sponsor-tier-price">$2,000+</p>
-            </article>
-          </div>
-
-          <div class="sponsor-benefits" aria-label="Sponsor tier benefits">
-            <div class="sponsor-benefit-label">Font Size on Shirts and Robot</div>
-            <div class="sponsor-size-reward">Small</div><div class="sponsor-size-reward">Medium</div><div class="sponsor-size-reward">Large</div><div class="sponsor-size-reward"><strong class="role-highlight">Extra Large</strong></div>
-            <div class="sponsor-benefit-label">Section on Website</div>
-            <div>Included</div><div>Included</div><div>Included</div><div>Included</div>
-            <div class="sponsor-benefit-label">Section on Upcoming Portfolio</div>
-            <div>Included</div><div>Included</div><div>Included</div><div>Included</div>
-            <div class="sponsor-benefit-label">Live Advertisement &amp;<br>Presentation at<br>Annual Scrimmage</div>
-            <div class="benefit-muted">-</div><div class="benefit-muted">-</div><div class="benefit-muted">-</div><div>Included</div>
-          </div>
+        <p class="sponsor-scroll-hint">Scroll horizontally to compare all four tiers.</p>
+        <div class="sponsor-table-scroll" role="region" aria-labelledby="sponsor-tier-heading" tabindex="0">
+          <table class="sponsor-table" aria-labelledby="sponsor-tier-heading">
+            <thead>
+              <tr>
+                <th scope="col">Benefits</th>
+                <th scope="col">
+                  <span class="sponsor-tier-name sponsor-tier-bronze">Bronze</span>
+                  <span class="sponsor-tier-price">$50 - $299</span>
+                </th>
+                <th scope="col">
+                  <span class="sponsor-tier-name sponsor-tier-silver">Silver</span>
+                  <span class="sponsor-tier-price">$300 - $999</span>
+                </th>
+                <th scope="col">
+                  <span class="sponsor-tier-name sponsor-tier-gold">Gold</span>
+                  <span class="sponsor-tier-price">$1,000 - $1,999</span>
+                </th>
+                <th scope="col">
+                  <span class="sponsor-tier-name sponsor-tier-platinum">Platinum</span>
+                  <span class="sponsor-tier-price">$2,000+</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="sponsor-size-reward">
+                <th scope="row">Font Size on Shirts and Robot</th>
+                <td>Small</td>
+                <td>Medium</td>
+                <td>Large</td>
+                <td><strong class="role-highlight">Extra Large</strong></td>
+              </tr>
+              <tr>
+                <th scope="row">Section on Website</th>
+                <td><span class="sponsor-benefit-check" role="img" aria-label="Included">✓</span></td>
+                <td><span class="sponsor-benefit-check" role="img" aria-label="Included">✓</span></td>
+                <td><span class="sponsor-benefit-check" role="img" aria-label="Included">✓</span></td>
+                <td><span class="sponsor-benefit-check" role="img" aria-label="Included">✓</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Section on Upcoming Portfolio</th>
+                <td><span class="sponsor-benefit-check" role="img" aria-label="Included">✓</span></td>
+                <td><span class="sponsor-benefit-check" role="img" aria-label="Included">✓</span></td>
+                <td><span class="sponsor-benefit-check" role="img" aria-label="Included">✓</span></td>
+                <td><span class="sponsor-benefit-check" role="img" aria-label="Included">✓</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Mention in Season Release Video</th>
+                <td class="benefit-muted">-</td>
+                <td class="benefit-muted">-</td>
+                <td><span class="sponsor-benefit-check" role="img" aria-label="Included">✓</span></td>
+                <td><span class="sponsor-benefit-check" role="img" aria-label="Included">✓</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Live Advertisement &amp; Presentation at Annual Scrimmage</th>
+                <td class="benefit-muted">-</td>
+                <td class="benefit-muted">-</td>
+                <td class="benefit-muted">-</td>
+                <td><span class="sponsor-benefit-check" role="img" aria-label="Included">✓</span></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 
